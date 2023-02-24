@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "957283610837",
+    "project_id": "serveeasy-project",
+    "storage_bucket": "serveeasy-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957283610837:android:c985d62e1bd46f0ae0f25c",
+        "android_client_info": {
+          "package_name": "com.app.serveeasy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957283610837-an7m620bblp20npc0c1dfocplmu7l99t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiPIrfqSznmylUEi0eb3gmWdGY3oHoTNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957283610837-an7m620bblp20npc0c1dfocplmu7l99t.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "957283610837-je0iam2u07oud7ikno335o1ff9tp7p91.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.serveeasy.pos"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:957283610837:android:492f83036bf40fbae0f25c",
+        "android_client_info": {
+          "package_name": "com.app.serveeasy.pos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "957283610837-an7m620bblp20npc0c1dfocplmu7l99t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiPIrfqSznmylUEi0eb3gmWdGY3oHoTNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "957283610837-an7m620bblp20npc0c1dfocplmu7l99t.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "957283610837-je0iam2u07oud7ikno335o1ff9tp7p91.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.serveeasy.pos"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "bb0ee40afd8cba02311c59c9bd7a9bc96a78c8c52302b5ac8a3c0867facab0bd"
+build_start_time: [1676583641, 656224966]
+build_end_time: [1676583641, 716970920]
+inputs:
+  "/Users/macbook/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.1.3/macos/Classes/SharedPreferencesPlugin.swift": !private [1675885499, 488239288]
+  "/Users/macbook/.pub-cache/hosted/pub.dev/shared_preferences_foundation-2.1.3/macos/Classes/messages.g.swift": !private [1675885499, 487887382]

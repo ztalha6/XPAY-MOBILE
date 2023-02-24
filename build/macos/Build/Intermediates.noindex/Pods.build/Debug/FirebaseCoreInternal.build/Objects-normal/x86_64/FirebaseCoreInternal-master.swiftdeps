@@ -1,0 +1,27 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "008b36db1a29e15c4fcf0e2666b4d0695edc0ca8c7167bb124e292a29a598344"
+build_start_time: [1676583685, 53574085]
+build_end_time: [1676583721, 473102092]
+inputs:
+  ? "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Heartbeat.swift"
+  : [1676583614, 553333759]
+  ? "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatController.swift"
+  : [1676583614, 554776668]
+  ? "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatStorage.swift"
+  : [1676583614, 555408477]
+  ? "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsBundle.swift"
+  : [1676583614, 555811166]
+  ? "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsPayload.swift"
+  : [1676583614, 556519031]
+  ? "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/RingBuffer.swift"
+  : [1676583614, 553745031]
+  ? "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Storage.swift"
+  : [1676583614, 552935123]
+  ? "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/StorageFactory.swift"
+  : [1676583614, 556838035]
+  ? "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/WeakContainer.swift"
+  : [1676583614, 556123733]
+  ? "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatController.swift"
+  : [1676583614, 554380893]
+  ? "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatsPayload.swift"
+  : [1676583614, 555088996]

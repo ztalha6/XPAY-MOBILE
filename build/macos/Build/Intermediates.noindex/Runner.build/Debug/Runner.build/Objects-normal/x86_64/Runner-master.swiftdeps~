@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "d8ea682eb3f16d1be78e8345c48f29a7487c4fe46ad85395248b07cdd99843e6"
+build_start_time: [1676583780, 325711011]
+build_end_time: [1676583780, 364860057]
+inputs:
+  "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Flutter/GeneratedPluginRegistrant.swift": !private [1676583666, 574344635]
+  "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Runner/AppDelegate.swift": !private [1666254068, 684823036]
+  "/Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Runner/MainFlutterWindow.swift": !private [1666254068, 689457416]

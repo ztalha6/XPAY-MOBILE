@@ -1,0 +1,66 @@
+name: serveeasy_app
+version: 1.0.0+1
+publish_to: none
+description: A new Flutter project.
+environment:
+  sdk: ">=2.17.6 <3.0.0"
+
+dependencies:
+  carousel_slider: ^4.1.1
+  cupertino_icons: ^1.0.2
+  dio: ^4.0.6
+  dio_http_cache: ^0.3.0
+  firebase_core: ^2.0.0
+  firebase_crashlytics: ^3.0.1
+  firebase_messaging: ^14.0.1
+  flutter:
+    sdk: flutter
+  flutter_local_notifications: ^13.0.0
+  flutter_staggered_animations: ^1.1.1
+  flutter_svg: ^2.0.0+1
+  flutter_zoom_drawer: ^3.0.3
+  geocoding: ^2.0.5
+  get: 4.6.5
+  google_fonts: ^4.0.3
+  google_sign_in: ^5.4.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  image_picker: ^0.8.6
+  image_cropper: ^3.0.1
+  intl: ^0.17.0
+  intl_phone_number_input: ^0.7.1
+  map_location_picker:
+    git:
+      url: https://github.com/ztalha6/map_location_picker.git
+      ref: master
+  payment_card_validation:
+    git:
+      url: https://github.com/ztalha6/Payment-Card-Validation.git
+      ref: master
+  package_info_plus: ^3.0.1
+  pin_code_fields: ^7.4.0
+  pull_to_refresh: ^2.0.0
+  rect_getter: ^1.1.0
+  scroll_to_index: ^3.0.1
+  shared_preferences: ^2.0.15
+  shimmer: ^2.0.0
+  sizer: ^2.0.15
+  video_player: ^2.4.7
+  dotted_border: ^2.0.0+3
+  timelines: ^0.1.0
+  cached_network_image: ^3.2.3
+  firebase_analytics: ^10.0.7
+  expandable: ^5.0.1
+  flutter_facebook_auth: ^5.0.6
+  sign_in_with_apple: ^4.2.0
+
+dev_dependencies:
+  flutter_lints: 2.0.1
+  flutter_test:
+    sdk: flutter
+  lint: ^2.0.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/

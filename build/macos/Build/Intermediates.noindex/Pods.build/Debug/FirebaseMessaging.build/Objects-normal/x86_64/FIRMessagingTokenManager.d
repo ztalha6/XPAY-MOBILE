@@ -1,0 +1,29 @@
+dependencies: \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingTokenManager.m \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseMessaging.build/module.modulemap \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingTokenManager.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Public/FirebaseMessaging/FIRMessaging.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseInstallations/Source/Library/Private/FirebaseInstallationsInternal.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseInstallations.build/module.modulemap \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallationsErrors.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallationsAuthTokenResult.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallations.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FirebaseInstallations.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/Target\ Support\ Files/FirebaseInstallations/FirebaseInstallations-umbrella.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/FIRMessagingConstants.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/FIRMessagingDefines.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/FIRMessagingLogger.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/FIRMessagingCode.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/NSError+FIRMessaging.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingAuthKeychain.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingAuthService.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingCheckinService.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/FIRMessagingUtilities.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingCheckinPreferences.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingCheckinStore.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingTokenDeleteOperation.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingTokenOperation.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingTokenFetchOperation.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingTokenInfo.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingAPNSInfo.h \
+  /Users/macbook/Documents/Tekrevol/serveeasy-app/macos/Pods/FirebaseMessaging/FirebaseMessaging/Sources/Token/FIRMessagingTokenStore.h
