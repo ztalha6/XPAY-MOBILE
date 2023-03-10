@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/flutter_facebook_auth.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		92yWjv7svYVE0vjn0Lau+oS/qO0=
+		6bf/mSL82prHf28htPaRHfXySs4=
 		</data>
 		<key>Modules/flutter_facebook_auth.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		3R1mjxQYTETSo3ffB6n1R2x07R0=
+		2jcWkr8al/73xIKdBMFl6SDDA+I=
 		</data>
 		<key>Modules/flutter_facebook_auth.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/flutter_facebook_auth.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2TQTkM9lAHoXa9SVZSOV7N5rTKI=
+		Cx8NL+o95BkHa3IN8nxQqj2NV5U=
 		</data>
 		<key>Modules/flutter_facebook_auth.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/flutter_facebook_auth.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pagYQrRSNujv/35q4vPuolCZXec=
+		AQsXE0b21SibpXMIJ476Rzbqv6o=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -84,14 +84,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tgxHQZJaFBewXxirU/veuyHp+CJ89NxSaDuTvxDgRQg=
+			Tyg5mRqPQ+3cfQhmv/ur3c4IeB0KW4KTFN++7+Urx80=
 			</data>
 		</dict>
 		<key>Modules/flutter_facebook_auth.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xvhHTdK7Nm2/4of+tJjb3ieRRT5mrpmUhp3kDq2GPYg=
+			242tnq0nog5e0E7AfuRRxfeKF+y+84SYU0gFGt+og3M=
 			</data>
 		</dict>
 		<key>Modules/flutter_facebook_auth.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -112,7 +112,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LRuaPyMGq/pD2n/6fNueY7yTYVrnP0LUrApVR+y9v9c=
+			tStLgbMAMEdx1aovjpE87//8asFmVPXGjsgivtiqy0k=
 			</data>
 		</dict>
 		<key>Modules/flutter_facebook_auth.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t8sG0Zau8H/eGHkYXsMRUc2P4quh+/KHP5hF61qcMog=
+			t8uoVxR8kvOjGQYI0kW5ehYOwMghw3+tdh25WILMzoE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

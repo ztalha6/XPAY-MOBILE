@@ -16,8 +16,8 @@ import 'package:serveeasy_app/app/data/repositories/menu_repositoy.dart';
 import 'package:serveeasy_app/app/data/repositories/product_repository.dart';
 import 'package:serveeasy_app/app/data/services/dialog_service.dart';
 import 'package:serveeasy_app/app/data/services/user_manager.dart';
-import 'package:serveeasy_app/app/modules/address/address_list/views/address_list_bottom_sheet.dart';
-import 'package:serveeasy_app/app/modules/address/address_list/views/address_list_view.dart';
+// import 'package:serveeasy_app/app/modules/address/address_list/views/address_list_bottom_sheet.dart';
+// import 'package:serveeasy_app/app/modules/address/address_list/views/address_list_view.dart';
 import 'package:serveeasy_app/app/routes/app_pages.dart';
 import 'package:serveeasy_app/core/constants/configuration.dart';
 
@@ -100,19 +100,19 @@ class MainController extends GetxController with GetTickerProviderStateMixin {
     if (user.value == null) {
       return "Loading...";
     }
-    return user.value!.addressDetail!.address!;
+    return '';
   }
 
   String get getBranch {
     if (user.value == null) {
       return "Loading...";
     }
-    return user.value!.branchName!;
+    return '';
   }
 
   @override
   Future<void> onInit() async {
-    getMenuData();
+    // getMenuData();
     await updateUserData();
     cartItems.value = await UserManager().getUserCart();
     dealItems.value = await UserManager().getUserDeals();
@@ -309,7 +309,7 @@ class MainController extends GetxController with GetTickerProviderStateMixin {
 
   Future<void> changeOrderType(int index) async {
     selectedOrderTypeIndex(index);
-    await UserManager().update(orderType: orderTypes[index].value);
+    // await UserManager().update(orderType: orderTypes[index].value);
   }
 
   Future<void> getData() async {
@@ -335,12 +335,12 @@ class MainController extends GetxController with GetTickerProviderStateMixin {
   }
 
   Future<void> setChip() async {
-    final OrderType selectedOrerType = OrderType.getOrderTypeFromValue(
-      user.value!.orderType!,
-    );
-    selectedOrderTypeIndex.value = orderTypes
-        .firstWhere((element) => element.value == selectedOrerType.value)
-        .index;
+    // final OrderType selectedOrerType = OrderType.getOrderTypeFromValue(
+    //   user.value!.orderType!,
+    // // );
+    // selectedOrderTypeIndex.value = orderTypes
+    //     .firstWhere((element) => element.value == selectedOrerType.value)
+    //     .index;
   }
 
   Future<void> gotoMenu({int menuIndex = 0}) async {
@@ -567,16 +567,16 @@ class MainController extends GetxController with GetTickerProviderStateMixin {
   }
 
   Future<void> proceedToCheckout() async {
-    final RepositoryResponse<Address> savedAddress =
-        await UserManager().hasAnySavedAddress();
-    if (savedAddress.isSuccess && savedAddress.data!.isSavedOnBackend) {
-      Get.toNamed(Routes.CHECKOUT);
-      return;
-    }
-    Get.toNamed(
-      Routes.ADDRESS_LIST,
-      arguments: AddressListViewParams(fromCheckoutView: false),
-    );
+    // final RepositoryResponse<Address> savedAddress =
+    //     await UserManager().hasAnySavedAddress();
+    // if (savedAddress.isSuccess && savedAddress.data!.isSavedOnBackend) {
+    //   Get.toNamed(Routes.CHECKOUT);
+    //   return;
+    // }
+    // Get.toNamed(
+    //   Routes.ADDRESS_LIST,
+    //   arguments: AddressListViewParams(fromCheckoutView: false),
+    // );
   }
 
   void gotoBranchListing() {
@@ -589,10 +589,10 @@ class MainController extends GetxController with GetTickerProviderStateMixin {
   }
 
   Future<void> addressBottomsheet() async {
-    final dynamic res = await Get.bottomSheet(const AddressBottomSheet());
-    if (res != null && res) {
-      await updateUserData();
-      Get.offAllNamed(Routes.BRANCH_LIST);
-    }
+    // final dynamic res = await Get.bottomSheet(const AddressBottomSheet());
+    // if (res != null && res) {
+    //   await updateUserData();
+    //   Get.offAllNamed(Routes.BRANCH_LIST);
+    // }
   }
 }

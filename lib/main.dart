@@ -12,9 +12,9 @@ import 'package:serveeasy_app/firebase_options.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await setupFirebase();
+  // await setupFirebase();
   await setupLocalDatabase();
-  Env.currentEnv = Envs.StagingEnv;
+  Env.currentEnv = Envs.LocalEnv;
   runApp(const BaseWidget(Routes.SPLASH));
 }
 

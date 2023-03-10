@@ -50,7 +50,7 @@ class SignInController extends GetxController {
           arguments: [false, true, emailController.text],
         );
       } else {
-        Get.offAllNamed(Routes.HOME);
+        Get.offAllNamed(Routes.DRAWER);
       }
     }
 

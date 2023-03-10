@@ -7,7 +7,7 @@ class OrderSuccessController extends GetxController {
   RxInt lastOrderId = 0.obs;
   @override
   Future<void> onInit() async {
-    lastOrderId.value = (await UserManager().getUser())!.lastOrderId!;
+    // lastOrderId.value = (await UserManager().getUser())!.lastOrderId!;
     super.onInit();
   }
 

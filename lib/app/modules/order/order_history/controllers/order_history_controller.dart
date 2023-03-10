@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:serveeasy_app/app/data/models/order/order_history_response_model.dart';
+import 'package:serveeasy_app/app/data/models/order/transaction_history_response_model.dart';
 import 'package:serveeasy_app/app/data/repositories/order_repository.dart';
 import 'package:serveeasy_app/app/modules/order/order_detail/views/order_detail_view.dart';
 import 'package:serveeasy_app/app/routes/app_pages.dart';
@@ -16,8 +17,8 @@ class OrderHistoryController extends GetxController
 
   TabController? tabController;
 
-  RxList<OrderData> ordersHistoryList = RxList<OrderData>([]);
-  RxList<OrderData> activeOrdersList = RxList<OrderData>([]);
+  RxList<Transaction> ordersHistoryList = RxList<Transaction>([]);
+  RxList<Transaction> activeOrdersList = RxList<Transaction>([]);
 
   RefreshController activeOrderRefreshController = RefreshController();
   RefreshController orderHistoryRefreshController = RefreshController();
@@ -37,7 +38,7 @@ class OrderHistoryController extends GetxController
     bool withClear = false,
   }) async {
     if (withClear) isLoadingOrderHistory(true);
-    final List<OrderData> data =
+    final List<Transaction> data =
         await OrderRepository().getOrderHistory(orderHistoryPage.value);
     if (data.isEmpty) orderHistoryPage.value--;
     if (withClear) ordersHistoryList.clear();
@@ -49,8 +50,8 @@ class OrderHistoryController extends GetxController
     bool withClear = false,
   }) async {
     if (withClear) isLoadingActiveOrders(true);
-    final List<OrderData> data =
-        await OrderRepository().getActiveOrders(activeOrderPage.value);
+    final List<Transaction> data =
+        await OrderRepository().getOrderHistory(activeOrderPage.value);
     if (data.isEmpty) activeOrderPage.value--;
     if (withClear) activeOrdersList.clear();
     activeOrdersList.addAll(data);

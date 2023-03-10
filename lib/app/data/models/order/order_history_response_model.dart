@@ -116,7 +116,7 @@ class OrderData {
   int? status;
   int? paymentStatus;
   num? grossAmount;
-  Eshtablishment? establishment;
+  // Eshtablishment? establishment;
   num? totalDiscount;
   num? tip;
   num? serviceCharges;
@@ -148,7 +148,7 @@ class OrderData {
     this.tableId,
     this.employeeId,
     this.establishmentId,
-    this.establishment,
+    // this.establishment,
     this.userAddressId,
     this.type,
     this.deliveryCustomerId,
@@ -219,9 +219,9 @@ class OrderData {
     deletedAt = json['deleted_at'];
     platform = json['platform'];
     cartId = json['cart_id'];
-    establishment = json['establishment'] == null
-        ? null
-        : Eshtablishment.fromJson(json['establishment']);
+    // establishment = json['establishment'] == null
+    //     ? null
+    //     : Eshtablishment.fromJson(json['establishment']);
     userAddress = json['user_address'] != null
         ? UserAddress.fromJson(json['user_address'])
         : null;
@@ -266,7 +266,7 @@ class OrderData {
     data['delivery_customer_id'] = deliveryCustomerId;
     data['rider_id'] = riderId;
     data['status'] = status;
-    data['establishment'] = establishment;
+    // data['establishment'] = establishment;
     data['payment_status'] = paymentStatus;
     data['gross_amount'] = grossAmount;
     data['payment_type'] = paymentType;

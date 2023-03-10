@@ -40,9 +40,12 @@ class DrawerView extends GetView<DrawerViewController> {
                         onTap: () => model.changePage(5),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
-                          crossAxisAlignment: model.isGuest
-                              ? CrossAxisAlignment.start
-                              : CrossAxisAlignment.center,
+                          crossAxisAlignment:
+                              // model.isGuest
+                              //     ? CrossAxisAlignment.start
+                              //     :
+
+                              CrossAxisAlignment.center,
                           children: [
                             CircleAvatar(
                               radius: 30,
@@ -67,32 +70,34 @@ class DrawerView extends GetView<DrawerViewController> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    model.isGuest
-                                        ? "Sign in to unlock exclusive offers and discounts"
-                                        : model.user.value!.fullName!,
+                                    // model.isGuest
+                                    //     ? "Sign in to unlock exclusive offers and discounts"
+                                    //     :
+
+                                    model.user.value!.fullName!,
                                     maxLines: 2,
                                     style: Theme.of(context)
                                         .textTheme
                                         .displaySmall!
                                         .copyWith(fontSize: 16),
                                   ),
-                                  if (model.isGuest) SizedBox(height: 10),
-                                  if (model.isGuest)
-                                    PrimaryButton(
-                                      buttonColor: Colors.transparent,
-                                      buttonWidth: 80,
-                                      buttonHeight: 40,
-                                      text: 'Sign In',
-                                      borderColor: Colors.black,
-                                      textStyle: Theme.of(context)
-                                          .textTheme
-                                          .headlineMedium!
-                                          .copyWith(
-                                            fontSize: 14,
-                                            color: Colors.black,
-                                          ),
-                                      onTap: () => model.onSignInTap(),
-                                    ),
+                                  // if (model.isGuest) SizedBox(height: 10),
+                                  // if (model.isGuest)
+                                  //   PrimaryButton(
+                                  //     buttonColor: Colors.transparent,
+                                  //     buttonWidth: 80,
+                                  //     buttonHeight: 40,
+                                  //     text: 'Sign In',
+                                  //     borderColor: Colors.black,
+                                  //     textStyle: Theme.of(context)
+                                  //         .textTheme
+                                  //         .headlineMedium!
+                                  //         .copyWith(
+                                  //           fontSize: 14,
+                                  //           color: Colors.black,
+                                  //         ),
+                                  //     onTap: () => model.onSignInTap(),
+                                  //   ),
                                 ],
                               ),
                             ),
@@ -135,31 +140,28 @@ class DrawerView extends GetView<DrawerViewController> {
                           )
                           .toList(),
                       SizedBox(height: 5.h),
-                      Visibility(
-                        visible: !model.isGuest,
-                        child: TextButton(
-                          onPressed: () {
-                            model.logoutUser();
-                          },
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              const Icon(
-                                Icons.logout,
-                                color: Colors.red,
+                      TextButton(
+                        onPressed: () {
+                          model.logoutUser();
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            const Icon(
+                              Icons.logout,
+                              color: Colors.red,
+                            ),
+                            const SizedBox(width: 10),
+                            Expanded(
+                              child: Text(
+                                "Logout",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .headlineMedium!
+                                    .copyWith(color: Colors.red),
                               ),
-                              const SizedBox(width: 10),
-                              Expanded(
-                                child: Text(
-                                  "Logout",
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .headlineMedium!
-                                      .copyWith(color: Colors.red),
-                                ),
-                              )
-                            ],
-                          ),
+                            )
+                          ],
                         ),
                       )
                     ],

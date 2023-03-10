@@ -57,45 +57,45 @@ class UserManager {
         : null;
   }
 
-  Future<int> getSavedAddressId() async {
-    final String savedUserString =
-        (await SharedPreferences.getInstance()).getString(_keyUser) ?? '';
+  // Future<int> getSavedAddressId() async {
+  //   final String savedUserString =
+  //       (await SharedPreferences.getInstance()).getString(_keyUser) ?? '';
 
-    if (savedUserString.isNotEmpty) {
-      final User user = User.fromJson(json.decode(savedUserString));
-      if (user.addressDetail != null && user.addressDetail!.id != null) {
-        return user.addressDetail!.id!;
-      }
-    }
-    return -1;
-  }
+  //   if (savedUserString.isNotEmpty) {
+  //     final User user = User.fromJson(json.decode(savedUserString));
+  //     if (user.addressDetail != null && user.addressDetail!.id != null) {
+  //       return user.addressDetail!.id!;
+  //     }
+  //   }
+  //   return -1;
+  // }
 
-  Future<bool> isNotAccessingSameBranch(int branchId) async {
-    final int? savedBranchId = (await getUser())!.selectedBranchId;
-    if (savedBranchId != null && savedBranchId != branchId) return true;
-    return false;
-  }
+  // Future<bool> isNotAccessingSameBranch(int branchId) async {
+  //   final int? savedBranchId = (await getUser())!.selectedBranchId;
+  //   if (savedBranchId != null && savedBranchId != branchId) return true;
+  //   return false;
+  // }
 
-  Future<Address?> getSavedAddress() async {
-    final String savedUserString =
-        (await SharedPreferences.getInstance()).getString(_keyUser) ?? '';
-    return savedUserString.isNotEmpty
-        ? User.fromJson(json.decode(savedUserString)).addressDetail!
-        : null;
-  }
+  // Future<Address?> getSavedAddress() async {
+  //   final String savedUserString =
+  //       (await SharedPreferences.getInstance()).getString(_keyUser) ?? '';
+  //   return savedUserString.isNotEmpty
+  //       ? User.fromJson(json.decode(savedUserString)).addressDetail!
+  //       : null;
+  // }
 
-  Future<RepositoryResponse<Address>> hasAnySavedAddress() async {
-    final String savedUserString =
-        (await SharedPreferences.getInstance()).getString(_keyUser) ?? '';
-    if (savedUserString.isNotEmpty &&
-        User.fromJson(json.decode(savedUserString)).addressDetail != null) {
-      return RepositoryResponse(
-        isSuccess: true,
-        data: User.fromJson(json.decode(savedUserString)).addressDetail,
-      );
-    }
-    return RepositoryResponse(isSuccess: false);
-  }
+  // Future<RepositoryResponse<Address>> hasAnySavedAddress() async {
+  //   final String savedUserString =
+  //       (await SharedPreferences.getInstance()).getString(_keyUser) ?? '';
+  //   if (savedUserString.isNotEmpty &&
+  //       User.fromJson(json.decode(savedUserString)).addressDetail != null) {
+  //     return RepositoryResponse(
+  //       isSuccess: true,
+  //       data: User.fromJson(json.decode(savedUserString)).addressDetail,
+  //     );
+  //   }
+  //   return RepositoryResponse(isSuccess: false);
+  // }
 
   Future<List<CartItem>> getUserCart() async {
     final String email = (await getUser())!.email!;
@@ -139,51 +139,51 @@ class UserManager {
         : Summary.fresh();
   }
 
-  Future<bool> update({
-    int? orderType,
-    int? selectedBranchId,
-    int? eshtablishmentId,
-    int? cartId,
-    int? dealId,
-    int? lastOrderId,
-    Address? addressDetail,
-    String? branchName,
-    String? cardToken,
-  }) async {
-    final User? user = await getUser();
-    if (user != null) {
-      if (orderType != null) {
-        user.orderType = orderType;
-      }
-      if (selectedBranchId != null) {
-        user.selectedBranchId = selectedBranchId;
-      }
-      if (branchName != null) {
-        user.branchName = branchName;
-      }
-      if (eshtablishmentId != null) {
-        user.establishmentId = eshtablishmentId;
-      }
-      if (cartId != null) {
-        user.cartId = cartId;
-      }
-      if (dealId != null) {
-        user.dealId = dealId;
-      }
-      if (lastOrderId != null) {
-        user.lastOrderId = lastOrderId;
-      }
-      if (addressDetail != null) {
-        user.addressDetail = addressDetail;
-      }
-      if (cardToken != null) {
-        user.cardToken = cardToken;
-      }
-      saveUser(user);
-      return true;
-    }
-    return false;
-  }
+  // Future<bool> update({
+  //   int? orderType,
+  //   int? selectedBranchId,
+  //   int? eshtablishmentId,
+  //   int? cartId,
+  //   int? dealId,
+  //   int? lastOrderId,
+  //   Address? addressDetail,
+  //   String? branchName,
+  //   String? cardToken,
+  // }) async {
+  //   final User? user = await getUser();
+  //   if (user != null) {
+  //     if (orderType != null) {
+  //       user.orderType = orderType;
+  //     }
+  //     if (selectedBranchId != null) {
+  //       user.selectedBranchId = selectedBranchId;
+  //     }
+  //     if (branchName != null) {
+  //       user.branchName = branchName;
+  //     }
+  //     if (eshtablishmentId != null) {
+  //       user.establishmentId = eshtablishmentId;
+  //     }
+  //     if (cartId != null) {
+  //       user.cartId = cartId;
+  //     }
+  //     if (dealId != null) {
+  //       user.dealId = dealId;
+  //     }
+  //     if (lastOrderId != null) {
+  //       user.lastOrderId = lastOrderId;
+  //     }
+  //     if (addressDetail != null) {
+  //       user.addressDetail = addressDetail;
+  //     }
+  //     if (cardToken != null) {
+  //       user.cardToken = cardToken;
+  //     }
+  //     saveUser(user);
+  //     return true;
+  //   }
+  //   return false;
+  // }
 
   Future<bool> removeUser() async =>
       (await SharedPreferences.getInstance()).remove(_keyUser);

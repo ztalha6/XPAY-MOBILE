@@ -1,7 +1,7 @@
 const signUpApiConstant = 'register-end-user';
 const verifyOtpApiConstant = 'verify-otp';
 const verifyAddressApiConstant = 'verify-user-address';
-const signInApiConstant = 'online-login';
+const signInApiConstant = 'login';
 const socialSignInApiConstant = 'social-login';
 const registerGuestUser = 'register-guest-user';
 const resetApiConstant = 'reset-password';
@@ -17,5 +17,7 @@ const getUserAddress = 'user-addresses';
 const postUpdateUserAddress = 'update-user-addresses';
 const postCreateUserAddress = 'user-addresses';
 const createOrderApiconstant = 'orders';
-const orderHistory = 'orders';
+const orderHistory = 'payments';
+const orderSingleHistory = 'get-payment-by-user';
+const getDisputesAPI = 'disputes';
 const searchProductApiConstant = 'product-search?pagination=true&';

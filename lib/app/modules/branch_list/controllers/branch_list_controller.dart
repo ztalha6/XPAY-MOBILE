@@ -44,43 +44,43 @@ class BranchListController extends GetxController {
   }
 
   Future<void> setLocation() async {
-    final RepositoryResponse<Address> savedAddress =
-        await _userManager.hasAnySavedAddress();
-    if (!savedAddress.isSuccess) {
-      if (!await LocationService().hasLocationPermission() ||
-          savedAddress.data == null) {
-        final dynamic cordinate = await Get.toNamed(Routes.ASK_LOCATION);
-        if (cordinate == null) return;
-        locationDetails(cordinate);
-        await _userManager.update(
-          addressDetail: Address(
-            address: locationDetails.value!.formattedAddress,
-            lat: locationDetails.value!.geometry.location.lat,
-            lng: locationDetails.value!.geometry.location.lng,
-          ),
-        );
-        return;
-      }
-    }
-    locationDetails.value = GeocodingResult(
-      geometry: Geometry(
-        location: Location(
-          lat: savedAddress.data!.lat!,
-          lng: savedAddress.data!.lng!,
-        ),
-      ),
-      placeId: "",
-      formattedAddress: savedAddress.data!.address,
-    );
+    // final RepositoryResponse<Address> savedAddress =
+    //     await _userManager.hasAnySavedAddress();
+    // if (!savedAddress.isSuccess) {
+    //   if (!await LocationService().hasLocationPermission() ||
+    //       savedAddress.data == null) {
+    //     final dynamic cordinate = await Get.toNamed(Routes.ASK_LOCATION);
+    //     if (cordinate == null) return;
+    //     locationDetails(cordinate);
+    //     await _userManager.update(
+    //       addressDetail: Address(
+    //         address: locationDetails.value!.formattedAddress,
+    //         lat: locationDetails.value!.geometry.location.lat,
+    //         lng: locationDetails.value!.geometry.location.lng,
+    //       ),
+    //     );
+    //     return;
+    //   }
+    // }
+    // locationDetails.value = GeocodingResult(
+    //   geometry: Geometry(
+    //     location: Location(
+    //       lat: savedAddress.data!.lat!,
+    //       lng: savedAddress.data!.lng!,
+    //     ),
+    //   ),
+    //   placeId: "",
+    //   formattedAddress: savedAddress.data!.address,
+    // );
   }
 
   Future<void> setChip() async {
-    final OrderType selectedOrerType = OrderType.getOrderTypeFromValue(
-      (await _userManager.getUser())!.orderType!,
-    );
-    selectedOrderTypeIndex.value = orderTypes
-        .firstWhere((element) => element.value == selectedOrerType.value)
-        .index;
+    // final OrderType selectedOrerType = OrderType.getOrderTypeFromValue(
+    //   (await _userManager.getUser())!.orderType!,
+    // );
+    // selectedOrderTypeIndex.value = orderTypes
+    //     .firstWhere((element) => element.value == selectedOrerType.value)
+    //     .index;
   }
 
   Future<void> onRefresh() async {
@@ -145,40 +145,40 @@ class BranchListController extends GetxController {
   }
 
   Future<void> changeOrderType(int index) async {
-    selectedOrderTypeIndex(index);
-    await _userManager.update(orderType: orderTypes[index].value);
-    await getBranches(
-      lat: locationDetails.value!.geometry.location.lat,
-      lng: locationDetails.value!.geometry.location.lng,
-      withClear: true,
-    );
+    // selectedOrderTypeIndex(index);
+    // await _userManager.update(orderType: orderTypes[index].value);
+    // await getBranches(
+    //   lat: locationDetails.value!.geometry.location.lat,
+    //   lng: locationDetails.value!.geometry.location.lng,
+    //   withClear: true,
+    // );
   }
 
   Future<void> onBranchTap(int index) async {
-    isNavigating(true);
-    if (await _userManager.isNotAccessingSameBranch(branches[index].id!)) {
-      final bool? confirmClear = await DialogService().showConfirmationDialog(
-        title: 'Warning',
-        description:
-            'Are you sure you want to switch branch? Your saved cart will be cleared!',
-      );
-      if (!confirmClear!) {
-        isNavigating(false);
-        return;
-      }
-      await _userManager.clearLocalCart();
-    }
-    await EshtablishmentRepository().updateEshtablishent(branches[index].id!);
-    await _userManager.update(
-      selectedBranchId: branches[index].id,
-      branchName: branches[index].name,
-      addressDetail: Address(
-        address: locationDetails.value!.formattedAddress,
-        lat: locationDetails.value!.geometry.location.lat,
-        lng: locationDetails.value!.geometry.location.lng,
-      ),
-    );
-    Get.offAllNamed(Routes.DRAWER);
-    isNavigating(false);
+    // isNavigating(true);
+    // if (await _userManager.isNotAccessingSameBranch(branches[index].id!)) {
+    //   final bool? confirmClear = await DialogService().showConfirmationDialog(
+    //     title: 'Warning',
+    //     description:
+    //         'Are you sure you want to switch branch? Your saved cart will be cleared!',
+    //   );
+    //   if (!confirmClear!) {
+    //     isNavigating(false);
+    //     return;
+    //   }
+    //   await _userManager.clearLocalCart();
+    // }
+    // await EshtablishmentRepository().updateEshtablishent(branches[index].id!);
+    // await _userManager.update(
+    //   selectedBranchId: branches[index].id,
+    //   branchName: branches[index].name,
+    //   addressDetail: Address(
+    //     address: locationDetails.value!.formattedAddress,
+    //     lat: locationDetails.value!.geometry.location.lat,
+    //     lng: locationDetails.value!.geometry.location.lng,
+    //   ),
+    // );
+    // Get.offAllNamed(Routes.DRAWER);
+    // isNavigating(false);
   }
 }

@@ -14,9 +14,9 @@ class OrderHistoryView extends GetView<OrderHistoryController> {
   Widget build(BuildContext context) {
     Get.put(OrderHistoryController());
     return GetX<OrderHistoryController>(
-      dispose: (s) {
-        Get.delete<OrderHistoryController>();
-      },
+      // dispose: (s) {
+      //   Get.delete<OrderHistoryController>();
+      // },
       builder: (model) {
         return Scaffold(
           appBar: AppBar(
@@ -45,7 +45,8 @@ class OrderHistoryView extends GetView<OrderHistoryController> {
                     unselectedLabelColor: Colors.grey,
                     indicatorWeight: 2.5,
                     labelStyle: Theme.of(context).textTheme.displayLarge,
-                    unselectedLabelStyle: Theme.of(context).textTheme.headlineMedium,
+                    unselectedLabelStyle:
+                        Theme.of(context).textTheme.headlineMedium,
                     tabs: const [
                       Tab(text: "Active Orders"),
                       Tab(text: 'Order History'),

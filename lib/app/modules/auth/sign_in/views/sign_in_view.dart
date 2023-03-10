@@ -81,6 +81,8 @@ class SignInView extends GetView<SignInController> {
                       const SizedBox(height: 15),
                       PrimaryButton(
                         isLoading: model.isLoading.value,
+                        buttonColor:
+                            model.configs.secondaryColor.withOpacity(0.8),
                         text: 'Sign In',
                         textStyle: Theme.of(context)
                             .textTheme
@@ -94,6 +96,8 @@ class SignInView extends GetView<SignInController> {
                       const SizedBox(height: 15),
                       PrimaryButton(
                         isLoading: model.isPerformingGuestSignIn.value,
+                        buttonColor:
+                            model.configs.primaryColor.withOpacity(0.8),
                         text: 'Continue as Guest',
                         textStyle: Theme.of(context)
                             .textTheme

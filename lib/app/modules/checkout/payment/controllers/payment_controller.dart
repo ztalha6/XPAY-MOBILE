@@ -43,14 +43,14 @@ class PaymentController extends GetxController {
     final bool isValid = validateFields();
     if (!isValid) return;
     isLoading(true);
-    if (await OrderRepository().getCardToken(paymentCard.value)) {
-      final CheckoutController checkourController =
-          Get.find<CheckoutController>();
-      checkourController.paymentCard(paymentCard.value);
-      checkourController.selectedPayMethod(1);
-      checkourController.cartSummary();
-      Get.back();
-    }
+    // if (await OrderRepository().getCardToken(paymentCard.value)) {
+    //   final CheckoutController checkourController =
+    //       Get.find<CheckoutController>();
+    //   checkourController.paymentCard(paymentCard.value);
+    //   checkourController.selectedPayMethod(1);
+    //   checkourController.cartSummary();
+    //   Get.back();
+    // }
     isLoading(false);
   }
 

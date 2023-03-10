@@ -35,6 +35,7 @@ abstract class Routes {
   static const SETTINGS = _Paths.SETTINGS;
   static const PAYMENT = _Paths.CHECKOUT + _Paths.PAYMENT;
   static const ASK_LOCATION = _Paths.LOCATION + _Paths.ASK_LOCATION;
+  static const DISPUTES = _Paths.DISPUTES;
 }
 
 abstract class _Paths {
@@ -69,4 +70,5 @@ abstract class _Paths {
   static const SETTINGS = '/settings';
   static const PAYMENT = '/payment';
   static const ASK_LOCATION = '/ask-location';
+  static const DISPUTES = '/disputes';
 }

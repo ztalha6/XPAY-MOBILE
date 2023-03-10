@@ -9,7 +9,7 @@ class HomeController extends GetxController {
   RxList<OrderType> orderTypes = RxList<OrderType>(OrderType.orderTypes);
 
   Future<void> gotoLocation(int index) async {
-    await UserManager().update(orderType: orderTypes[index].value);
+    // await UserManager().update(orderType: orderTypes[index].value);
     Get.toNamed(Routes.BRANCH_LIST);
   }
 }

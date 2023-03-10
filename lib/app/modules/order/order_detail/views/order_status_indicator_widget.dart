@@ -8,10 +8,10 @@ class DeliveryProcessWidget extends StatelessWidget {
 
   final OrderStatus status;
   final List<String> statuses = [
-    'Order accepted',
-    'Preparing order',
+    'Order Placed',
+    'Confirming order',
     'Order dispatched',
-    'Order pickup'
+    'Order Delivery'
   ];
   final DotIndicator activeIndicator = DotIndicator(
     color: Configuration().secondaryColor.withOpacity(0.9),

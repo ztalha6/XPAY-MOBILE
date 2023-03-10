@@ -24,8 +24,8 @@ class OrderApiService {
     final DioBuilderResponse dioBuilderResponse =
         await DioBuilder().buildNonCachedDio(hasAuth: true);
     final Response response = await dioBuilderResponse.dio.get(
-      customerName.isEmpty
-          ? "$orderHistory?type=$orderType&page=$page&status[]=70"
+      true
+          ? "$orderHistory"
           : "$orderHistory?type=$orderType&customer_name=$customerName&page=$page",
       options: dioBuilderResponse.dioOptions,
     );
@@ -51,7 +51,17 @@ class OrderApiService {
     final DioBuilderResponse dioBuilderResponse =
         await DioBuilder().buildNonCachedDio(hasAuth: true);
     final Response response = await dioBuilderResponse.dio.get(
-      "$orderHistory/$orderId",
+      "$orderSingleHistory/$orderId",
+      options: dioBuilderResponse.dioOptions,
+    );
+    return response;
+  }
+
+  Future<dynamic> getDisputes() async {
+    final DioBuilderResponse dioBuilderResponse =
+        await DioBuilder().buildNonCachedDio(hasAuth: true);
+    final Response response = await dioBuilderResponse.dio.get(
+      "$getDisputesAPI/?pagination=false&dispute_status[]=10",
       options: dioBuilderResponse.dioOptions,
     );
     return response;

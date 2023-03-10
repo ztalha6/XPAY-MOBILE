@@ -20,19 +20,19 @@ class SplashController extends GetxController {
     super.onInit();
     packageInfo.value = await PackageInfo.fromPlatform();
     await Future.delayed(const Duration(seconds: 4));
-    if (!await _appService.getFirstStart()) {
-      await _appService.setFirstStart();
-      Get.offAndToNamed(Routes.ONBOARDING);
-      return;
-    }
-    if ((await TokenManager().getToken()).isNotEmpty) {
-      if ((await UserManager().getUser())!.addressDetail == null) {
-        Get.offAndToNamed(Routes.HOME);
-        return;
-      }
-      Get.offAndToNamed(Routes.DRAWER);
-      return;
-    }
+    // if (!await _appService.getFirstStart()) {
+    //   await _appService.setFirstStart();
+    //   Get.offAndToNamed(Routes.ONBOARDING);
+    //   return;
+    // }
+    // if ((await TokenManager().getToken()).isNotEmpty) {
+    //   if ((await UserManager().getUser())!.addressDetail == null) {
+    //     Get.offAndToNamed(Routes.HOME);
+    //     return;
+    //   }
+    //   Get.offAndToNamed(Routes.DRAWER);
+    //   return;
+    // }
     Get.offAndToNamed(Routes.SIGN_IN);
   }
 }

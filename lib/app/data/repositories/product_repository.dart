@@ -81,50 +81,50 @@ class ProductRepository {
     return [];
   }
 
-  Future<RepositoryResponse<List>> getCartSummary(
-    List<CartItem> cartList,
-    List<Deal> dealList,
-    PaymentType paymentType,
-  ) async {
-    try {
-      final User? user = await UserManager().getUser();
-      final ResponseModel<CartSummaryResponse> responseModel =
-          await ResponseModel.fromApiResponse<CartSummaryResponse>(
-        () async => await ProductApiService().getCartSummary(
-          CartSummaryRequest(
-            paymentType: paymentType.value,
-            orderType: 40,
-            cartItems: cartList,
-            establishmentId: user!.establishmentId,
-            deals: dealList,
-          ),
-        ),
-        (body) => CartSummaryResponse.fromJson(body),
-      );
-      if (responseModel.status == ResponseStatus.success) {
-        final List<ResponseCartItems> cartItems =
-            responseModel.response!.data!.cartItems!;
-        final List<ResponseDealsItems> deals =
-            responseModel.response!.data!.deals!;
-        await UserManager().update(
-          cartId: cartItems.isNotEmpty ? cartItems.first.id : null,
-          dealId: deals.isNotEmpty ? deals.first.dealId : null,
-        );
-        return RepositoryResponse(
-          isSuccess: true,
-          data: [
-            CartItem.fromResponseCart(responseModel.response!.data!.cartItems!),
-            Deal.fromResponseCart(deals),
-            responseModel.response!.data!.getSummary,
-          ],
-        );
-      } else if (responseModel.status == ResponseStatus.responseError ||
-          responseModel.status == ResponseStatus.nullResponse) {
-        SnackbarManager().showAlertSnackbar(responseModel.error!);
-      }
-    } on Exception catch (e) {
-      ExceptionHandler().handle(e);
-    }
-    return RepositoryResponse(isSuccess: false);
-  }
+  // Future<RepositoryResponse<List>> getCartSummary(
+  //   List<CartItem> cartList,
+  //   List<Deal> dealList,
+  //   PaymentType paymentType,
+  // ) async {
+  //   try {
+  //     final User? user = await UserManager().getUser();
+  //     final ResponseModel<CartSummaryResponse> responseModel =
+  //         await ResponseModel.fromApiResponse<CartSummaryResponse>(
+  //       () async => await ProductApiService().getCartSummary(
+  //         CartSummaryRequest(
+  //           paymentType: paymentType.value,
+  //           orderType: 40,
+  //           cartItems: cartList,
+  //           establishmentId: 1,
+  //           deals: dealList,
+  //         ),
+  //       ),
+  //       (body) => CartSummaryResponse.fromJson(body),
+  //     );
+  //     if (responseModel.status == ResponseStatus.success) {
+  //       final List<ResponseCartItems> cartItems =
+  //           responseModel.response!.data!.cartItems!;
+  //       final List<ResponseDealsItems> deals =
+  //           responseModel.response!.data!.deals!;
+  //       await UserManager().update(
+  //         cartId: cartItems.isNotEmpty ? cartItems.first.id : null,
+  //         dealId: deals.isNotEmpty ? deals.first.dealId : null,
+  //       );
+  //       return RepositoryResponse(
+  //         isSuccess: true,
+  //         data: [
+  //           CartItem.fromResponseCart(responseModel.response!.data!.cartItems!),
+  //           Deal.fromResponseCart(deals),
+  //           responseModel.response!.data!.getSummary,
+  //         ],
+  //       );
+  //     } else if (responseModel.status == ResponseStatus.responseError ||
+  //         responseModel.status == ResponseStatus.nullResponse) {
+  //       SnackbarManager().showAlertSnackbar(responseModel.error!);
+  //     }
+  //   } on Exception catch (e) {
+  //     ExceptionHandler().handle(e);
+  //   }
+  //   return RepositoryResponse(isSuccess: false);
+  // }
 }

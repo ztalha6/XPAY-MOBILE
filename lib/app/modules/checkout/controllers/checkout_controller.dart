@@ -9,7 +9,6 @@ import 'package:serveeasy_app/app/data/models/order/cart_summary_response_model.
 import 'package:serveeasy_app/app/data/repositories/order_repository.dart';
 import 'package:serveeasy_app/app/data/repositories/product_repository.dart';
 import 'package:serveeasy_app/app/data/services/user_manager.dart';
-import 'package:serveeasy_app/app/modules/address/address_list/views/address_list_view.dart';
 import 'package:serveeasy_app/app/routes/app_pages.dart';
 import 'package:serveeasy_app/core/constants/configuration.dart';
 
@@ -36,7 +35,7 @@ class CheckoutController extends GetxController {
   final count = 0.obs;
   @override
   Future<void> onInit() async {
-    addressDetails.value = await UserManager().getSavedAddress();
+    // addressDetails.value = await UserManager().getSavedAddress();
     cartItems.value = await UserManager().getUserCart();
     dealItems.value = await UserManager().getUserDeals();
     summary.value = await UserManager().getUserCartSummary();
@@ -45,43 +44,43 @@ class CheckoutController extends GetxController {
   }
 
   Future<void> cartSummary({bool service = true}) async {
-    isSyncing.value = true;
-    final RepositoryResponse<List<dynamic>> response =
-        await ProductRepository().getCartSummary(
-      cartItems,
-      dealItems,
-      payTypeList[selectedPayMethod.value],
-    );
-    if (response.isSuccess) {
-      cartItems.value = response.data![0];
-      dealItems.value = response.data![1];
-      summary.value = response.data![2];
-    }
-    isSyncing.value = false;
+    // isSyncing.value = true;
+    // final RepositoryResponse<List<dynamic>> response =
+    //     await ProductRepository().getCartSummary(
+    //   cartItems,
+    //   dealItems,
+    //   payTypeList[selectedPayMethod.value],
+    // );
+    // if (response.isSuccess) {
+    //   cartItems.value = response.data![0];
+    //   dealItems.value = response.data![1];
+    //   summary.value = response.data![2];
+    // }
+    // isSyncing.value = false;
   }
 
   Future<void> updateAddress() async {
-    final dynamic addressSet = await Get.toNamed(
-      Routes.ADDRESS_LIST,
-      arguments: AddressListViewParams(fromCheckoutView: true),
-    );
-    if ((addressSet != null) && addressSet) {
-      addressDetails.value = await UserManager().getSavedAddress();
-    }
+    // final dynamic addressSet = await Get.toNamed(
+    //   Routes.ADDRESS_LIST,
+    //   arguments: AddressListViewParams(fromCheckoutView: true),
+    // );
+    // if ((addressSet != null) && addressSet) {
+    //   // addressDetails.value = await UserManager().getSavedAddress();
+    // }
   }
 
   Future<void> createOrder() async {
-    isPlacingOrder(true);
-    if (await OrderRepository().createOrder(
-      cartList: cartItems,
-      dealList: dealItems,
-      paymentType: payTypeList[selectedPayMethod.value],
-      amountReceived: summary.value.netAmount!.toString(),
-    )) {
-      Get.offAllNamed(Routes.DRAWER);
-      Get.toNamed(Routes.ORDER_SUCCESS);
-    }
-    isPlacingOrder(false);
+    // isPlacingOrder(true);
+    // if (await OrderRepository().createOrder(
+    //   cartList: cartItems,
+    //   dealList: dealItems,
+    //   paymentType: payTypeList[selectedPayMethod.value],
+    //   amountReceived: summary.value.netAmount!.toString(),
+    // )) {
+    //   Get.offAllNamed(Routes.DRAWER);
+    //   Get.toNamed(Routes.ORDER_SUCCESS);
+    // }
+    // isPlacingOrder(false);
   }
 
   void onTipChange(int index) {

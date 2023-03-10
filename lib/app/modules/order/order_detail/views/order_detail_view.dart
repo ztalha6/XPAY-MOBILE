@@ -21,7 +21,7 @@ class OrderDetailView extends GetView<OrderDetailController> {
       () => Scaffold(
         appBar: AppBar(
           title: Text(
-            'Order Status',
+            'Transaction Deatils',
             style: Theme.of(context).textTheme.displayLarge,
           ),
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
@@ -56,8 +56,10 @@ class OrderDetailView extends GetView<OrderDetailController> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "Order ID:",
-                                  style: Theme.of(context).textTheme.headlineMedium,
+                                  "Transaction ID:",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headlineMedium,
                                 ),
                                 Container(
                                   decoration: BoxDecoration(
@@ -70,8 +72,9 @@ class OrderDetailView extends GetView<OrderDetailController> {
                                     padding: const EdgeInsets.all(8.0),
                                     child: Text(
                                       "#${controller.orderDetail.value!.id!}",
-                                      style:
-                                          Theme.of(context).textTheme.displaySmall,
+                                      style: Theme.of(context)
+                                          .textTheme
+                                          .displaySmall,
                                     ),
                                   ),
                                 ),
@@ -82,11 +85,13 @@ class OrderDetailView extends GetView<OrderDetailController> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  "Estimated Pickup Time:",
-                                  style: Theme.of(context).textTheme.headlineMedium,
+                                  "Estimated Delivery Time:",
+                                  style: Theme.of(context)
+                                      .textTheme
+                                      .headlineMedium,
                                 ),
                                 Text(
-                                  "30 - 40 mins",
+                                  "2 - 3 Days",
                                   style: Theme.of(context)
                                       .textTheme
                                       .displayLarge!
@@ -105,11 +110,16 @@ class OrderDetailView extends GetView<OrderDetailController> {
                                         Image.asset(
                                           shopIcon,
                                           scale: 2.3,
+                                          color:
+                                              controller.configs.secondaryColor,
                                         ),
                                         const SizedBox(width: 5),
                                         Text(
-                                          controller.orderDetail.value!
-                                              .establishment!.name!,
+                                          controller
+                                              .orderDetail
+                                              .value!
+                                              .vendorBusinessDetail!
+                                              .businessName!,
                                           style: Theme.of(context)
                                               .textTheme
                                               .displayLarge!
@@ -121,8 +131,7 @@ class OrderDetailView extends GetView<OrderDetailController> {
                                     SizedBox(
                                       width: 300,
                                       child: Text(
-                                        controller.orderDetail.value!
-                                            .establishment!.address!,
+                                        'asdasdsa',
                                         overflow: TextOverflow.ellipsis,
                                         style: Theme.of(context)
                                             .textTheme

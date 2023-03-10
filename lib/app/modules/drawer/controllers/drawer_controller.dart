@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:serveeasy_app/app/data/models/user_model.dart';
 import 'package:serveeasy_app/app/data/repositories/user_repository.dart';
 import 'package:serveeasy_app/app/data/services/user_manager.dart';
+import 'package:serveeasy_app/app/modules/disputes/views/disputes_view.dart';
 import 'package:serveeasy_app/app/modules/drawer/controllers/menu_class.dart';
 import 'package:serveeasy_app/app/modules/home_summary/views/home_summary_view.dart';
 import 'package:serveeasy_app/app/modules/order/order_history/views/order_history_view.dart';
@@ -28,9 +29,9 @@ class DrawerViewController extends GetxController {
     ),
     const MenuClass(
       1,
-      "My Orders",
+      "Disputes",
       orderListIcon,
-      OrderHistoryView(),
+      DisputesView(),
     ),
     const MenuClass(
       2,
@@ -67,18 +68,18 @@ class DrawerViewController extends GetxController {
   String get getFirstLetter =>
       user.value == null ? "S" : user.value!.fullName!.characters.first;
 
-  bool get isGuest {
-    if (user.value == null) return true;
-    return user.value!.isGuest == 1;
-  }
+  // bool get isGuest {
+  //   if (user.value == null) return true;
+  //   return user.value!.isGuest == 1;
+  // }
 
   @override
   Future<void> onInit() async {
     user(await UserManager().getUser());
-    if (isGuest) {
-      menuItems.removeAt(1);
-      menuItems.removeAt(4);
-    }
+    // if (isGuest) {
+    //   menuItems.removeAt(1);
+    //   menuItems.removeAt(4);
+    // }
     super.onInit();
   }
 

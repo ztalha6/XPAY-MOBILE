@@ -1,11 +1,5 @@
 import 'package:get/get.dart';
 
-import '../modules/address/address_detail/bindings/address_detail_binding.dart';
-import '../modules/address/address_detail/views/address_detail_view.dart';
-import '../modules/address/address_list/bindings/address_list_binding.dart';
-import '../modules/address/address_list/views/address_list_view.dart';
-import '../modules/address/verify_address/bindings/verify_address_binding.dart';
-import '../modules/address/verify_address/views/verify_address_view.dart';
 import '../modules/auth/create_password/bindings/create_password_binding.dart';
 import '../modules/auth/create_password/views/create_password_view.dart';
 import '../modules/auth/forget_passsword/bindings/forget_passsword_binding.dart';
@@ -28,6 +22,8 @@ import '../modules/checkout/payment/views/payment_view.dart';
 import '../modules/checkout/promo/bindings/promo_binding.dart';
 import '../modules/checkout/promo/views/promo_view.dart';
 import '../modules/checkout/views/checkout_view.dart';
+import '../modules/disputes/bindings/disputes_binding.dart';
+import '../modules/disputes/views/disputes_view.dart';
 import '../modules/drawer/bindings/drawer_binding.dart';
 import '../modules/drawer/views/drawer_view.dart';
 import '../modules/home/bindings/home_binding.dart';
@@ -59,6 +55,13 @@ import '../modules/settings/bindings/settings_binding.dart';
 import '../modules/settings/views/settings_view.dart';
 import '../modules/splash/bindings/splash_binding.dart';
 import '../modules/splash/views/splash_view.dart';
+
+// import '../modules/address/address_detail/bindings/address_detail_binding.dart';
+// import '../modules/address/address_detail/views/address_detail_view.dart';
+// import '../modules/address/address_list/bindings/address_list_binding.dart';
+// import '../modules/address/address_list/views/address_list_view.dart';
+// import '../modules/address/verify_address/bindings/verify_address_binding.dart';
+// import '../modules/address/verify_address/views/verify_address_view.dart';
 
 part 'app_routes.dart';
 
@@ -171,21 +174,21 @@ class AppPages {
         ),
       ],
     ),
-    GetPage(
-      name: _Paths.ADDRESS_DETAIL,
-      page: () => const AddressDetailView(),
-      binding: AddressDetailBinding(),
-    ),
-    GetPage(
-      name: _Paths.ADDRESS_LIST,
-      page: () => const AddressListView(),
-      binding: AddressListBinding(),
-    ),
-    GetPage(
-      name: _Paths.VERIFY_ADDRESS,
-      page: () => const VerifyAddressView(),
-      binding: VerifyAddressBinding(),
-    ),
+    // GetPage(
+    //   name: _Paths.ADDRESS_DETAIL,
+    //   page: () => const AddressDetailView(),
+    //   binding: AddressDetailBinding(),
+    // ),
+    // GetPage(
+    //   name: _Paths.ADDRESS_LIST,
+    //   page: () => const AddressListView(),
+    //   binding: AddressListBinding(),
+    // ),
+    // GetPage(
+    //   name: _Paths.VERIFY_ADDRESS,
+    //   page: () => const VerifyAddressView(),
+    //   binding: VerifyAddressBinding(),
+    // ),
     GetPage(
       name: _Paths.ORDER_SUCCESS,
       page: () => const OrderSuccessView(),
@@ -225,6 +228,11 @@ class AppPages {
       name: _Paths.SETTINGS,
       page: () => const SettingsView(),
       binding: SettingsBinding(),
+    ),
+    GetPage(
+      name: _Paths.DISPUTES,
+      page: () => const DisputesView(),
+      binding: DisputesBinding(),
     ),
   ];
 }

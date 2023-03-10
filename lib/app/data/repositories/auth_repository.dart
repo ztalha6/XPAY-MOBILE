@@ -91,7 +91,8 @@ class AuthRepository {
           AccessRequest(
             email: email,
             password: password,
-            deviceToken: FCMNotificationService.fcmDeviceToken,
+            // deviceToken: FCMNotificationService.fcmDeviceToken,
+            deviceToken: 'token',
             deviceType: 'mobile',
             platform: Platform.isIOS ? "ios" : 'android',
           ),

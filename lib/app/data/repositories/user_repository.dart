@@ -87,73 +87,73 @@ class UserRepository {
     required Location location,
     required int addressId,
   }) async {
-    try {
-      final List<String> cityState =
-          await LocationService().getCityStatefromLocation(location: location);
-      if (cityState.isEmpty) return false;
-      final ResponseModel<GetSingleAddressResponse> responseModel =
-          await ResponseModel.fromApiResponse<GetSingleAddressResponse>(
-        () async => await UserApiService().updateAddress(
-          UpdateAddressRequest(
-            address: address,
-            landmark: landmark,
-            city: cityState[0],
-            state: cityState[1],
-            zipCode: 3424,
-            addressType: addressType.value,
-            lat: location.lat,
-            lng: location.lng,
-          ),
-          addressId: addressId,
-        ),
-        (body) => GetSingleAddressResponse.fromJson(body),
-      );
-      if (responseModel.status == ResponseStatus.success) {
-        await UserManager()
-            .update(addressDetail: responseModel.response!.address);
-        return true;
-      } else if (responseModel.status == ResponseStatus.responseError ||
-          responseModel.status == ResponseStatus.nullResponse) {
-        SnackbarManager().showAlertSnackbar(responseModel.error!);
-      }
-    } on Exception catch (e) {
-      ExceptionHandler().handle(e);
-    }
+    // try {
+    //   final List<String> cityState =
+    //       await LocationService().getCityStatefromLocation(location: location);
+    //   if (cityState.isEmpty) return false;
+    //   final ResponseModel<GetSingleAddressResponse> responseModel =
+    //       await ResponseModel.fromApiResponse<GetSingleAddressResponse>(
+    //     () async => await UserApiService().updateAddress(
+    //       UpdateAddressRequest(
+    //         address: address,
+    //         landmark: landmark,
+    //         city: cityState[0],
+    //         state: cityState[1],
+    //         zipCode: 3424,
+    //         addressType: addressType.value,
+    //         lat: location.lat,
+    //         lng: location.lng,
+    //       ),
+    //       addressId: addressId,
+    //     ),
+    //     (body) => GetSingleAddressResponse.fromJson(body),
+    //   );
+    //   if (responseModel.status == ResponseStatus.success) {
+    //     await UserManager()
+    //         .update(addressDetail: responseModel.response!.address);
+    //     return true;
+    //   } else if (responseModel.status == ResponseStatus.responseError ||
+    //       responseModel.status == ResponseStatus.nullResponse) {
+    //     SnackbarManager().showAlertSnackbar(responseModel.error!);
+    //   }
+    // } on Exception catch (e) {
+    //   ExceptionHandler().handle(e);
+    // }
     return false;
   }
 
   Future<bool> verifyAddressOtp(int addressId, String otp) async {
-    try {
-      final ResponseModel<GetSingleAddressResponse> responseModel =
-          await ResponseModel.fromApiResponse<GetSingleAddressResponse>(
-        () async => await UserApiService().verifyOtp(otp, addressId),
-        (body) => GetSingleAddressResponse.fromJson(body),
-      );
-      if (responseModel.status == ResponseStatus.success) {
-        await UserManager()
-            .update(addressDetail: responseModel.response!.address);
-        return responseModel.response!.status!;
-      } else if (responseModel.status == ResponseStatus.responseError ||
-          responseModel.status == ResponseStatus.nullResponse) {
-        SnackbarManager().showAlertSnackbar(responseModel.error!);
-      }
-    } on Exception catch (e) {
-      ExceptionHandler().handle(e);
-    }
+    // try {
+    //   final ResponseModel<GetSingleAddressResponse> responseModel =
+    //       await ResponseModel.fromApiResponse<GetSingleAddressResponse>(
+    //     () async => await UserApiService().verifyOtp(otp, addressId),
+    //     (body) => GetSingleAddressResponse.fromJson(body),
+    //   );
+    //   if (responseModel.status == ResponseStatus.success) {
+    //     await UserManager()
+    //         .update(addressDetail: responseModel.response!.address);
+    //     return responseModel.response!.status!;
+    //   } else if (responseModel.status == ResponseStatus.responseError ||
+    //       responseModel.status == ResponseStatus.nullResponse) {
+    //     SnackbarManager().showAlertSnackbar(responseModel.error!);
+    //   }
+    // } on Exception catch (e) {
+    //   ExceptionHandler().handle(e);
+    // }
     return false;
   }
 
   Future<bool> setCurrentLocationAsAddress() async {
-    final GeocodingResult? currentLocation =
-        await LocationService().getGeocodingFromCurrentLocation();
-    if (currentLocation == null) return false;
-    await UserManager().update(
-      addressDetail: Address(
-        address: currentLocation.formattedAddress,
-        lat: currentLocation.geometry.location.lat,
-        lng: currentLocation.geometry.location.lng,
-      ),
-    );
+    // final GeocodingResult? currentLocation =
+    //     await LocationService().getGeocodingFromCurrentLocation();
+    // if (currentLocation == null) return false;
+    // await UserManager().update(
+    //   addressDetail: Address(
+    //     address: currentLocation.formattedAddress,
+    //     lat: currentLocation.geometry.location.lat,
+    //     lng: currentLocation.geometry.location.lng,
+    //   ),
+    // );
     return true;
   }
 

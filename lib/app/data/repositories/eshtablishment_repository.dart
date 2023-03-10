@@ -40,25 +40,25 @@ class EshtablishmentRepository {
   }
 
   Future<bool> updateEshtablishent(int eshblishmentId) async {
-    try {
-      final ResponseModel<UpdateUserEshtablishmentResponse> responseModel =
-          await ResponseModel.fromApiResponse<UpdateUserEshtablishmentResponse>(
-        () async => await EshtablishmentApiService()
-            .updateUserEshtablishment(eshblishmentId),
-        (body) => UpdateUserEshtablishmentResponse.fromJson(body),
-      );
-      if (responseModel.status == ResponseStatus.success) {
-        await UserManager().update(
-          eshtablishmentId: responseModel.response!.data!.establishmentId,
-        );
-        return true;
-      } else if (responseModel.status == ResponseStatus.responseError ||
-          responseModel.status == ResponseStatus.nullResponse) {
-        SnackbarManager().showAlertSnackbar(responseModel.error!);
-      }
-    } on Exception catch (e) {
-      ExceptionHandler().handle(e);
-    }
+    // try {
+    //   final ResponseModel<UpdateUserEshtablishmentResponse> responseModel =
+    //       await ResponseModel.fromApiResponse<UpdateUserEshtablishmentResponse>(
+    //     () async => await EshtablishmentApiService()
+    //         .updateUserEshtablishment(eshblishmentId),
+    //     (body) => UpdateUserEshtablishmentResponse.fromJson(body),
+    //   );
+    //   if (responseModel.status == ResponseStatus.success) {
+    //     await UserManager().update(
+    //       eshtablishmentId: responseModel.response!.data!.establishmentId,
+    //     );
+    //     return true;
+    //   } else if (responseModel.status == ResponseStatus.responseError ||
+    //       responseModel.status == ResponseStatus.nullResponse) {
+    //     SnackbarManager().showAlertSnackbar(responseModel.error!);
+    //   }
+    // } on Exception catch (e) {
+    //   ExceptionHandler().handle(e);
+    // }
     return false;
   }
 }

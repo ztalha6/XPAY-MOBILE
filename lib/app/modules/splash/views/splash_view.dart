@@ -10,7 +10,7 @@ class SplashView extends StatelessWidget {
   Widget build(BuildContext context) {
     final SplashController model = Get.put(SplashController());
     return Scaffold(
-      backgroundColor: model.configs.primaryColor,
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           Center(

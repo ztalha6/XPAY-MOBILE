@@ -22,11 +22,11 @@
 		</data>
 		<key>Modules/path_provider_foundation.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		LkUVBVj2D2TxhGI2zsonT8F9L0U=
+		KOjVZbpgO+rO/UsTs+dDb9YT0UY=
 		</data>
 		<key>Modules/path_provider_foundation.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		LquM1Y/npOvvBhOby1x5aH01UkM=
+		SeOGWUKlhmcVNn+Ws92/WyIM+t0=
 		</data>
 		<key>Modules/path_provider_foundation.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>Modules/path_provider_foundation.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		I3rOLhNLNAl1yfIjKl01VmXkBt8=
+		ID+RazLihn4rVfzr5jzftYP2kXA=
 		</data>
 		<key>Modules/path_provider_foundation.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/path_provider_foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		NLqMYghap53MEivt2p2RMIqBsWE=
+		nmDZpImPP72MOLs0K2neGmOaMI8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -80,14 +80,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZSO9MyHUK85ibPlWPji/hP5p1ZRnRI6sFKNS4ShaogQ=
+			XS+z7L38Cy6dsaVtCzgKJMxMZAn6OqSxp1wh4gtDpm4=
 			</data>
 		</dict>
 		<key>Modules/path_provider_foundation.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7AfxsN2RDD+OJWQObZiFezars0yDcXF9xlZnjk7HZzw=
+			lMLyfpyaILrd1Bv8iSrzSoBfkl3VbTkAOp+YWerLN+I=
 			</data>
 		</dict>
 		<key>Modules/path_provider_foundation.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -108,7 +108,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gCdsloOMlcFyzNUADGMDzJhHuJsP8D7hqcuOUMArPJ0=
+			r/IAe3ZEYD9VQ2qdMdFhmTA6gfArFuzFAB+Ffw192PY=
 			</data>
 		</dict>
 		<key>Modules/path_provider_foundation.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -129,7 +129,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J+mtrmKMyNt8SgpkkxgIQrDEO6crE2uwfny1yDOnnmc=
+			1ce/b9YP/r/wa1kN4/BAD10/kui1/MLm9cMKA4lr3wI=
 			</data>
 		</dict>
 	</dict>
