@@ -34,10 +34,10 @@ class SplashView extends StatelessWidget {
                       );
                     },
                   ),
-                  Text(
-                    "Powered by Revol Ventures",
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
+                  // Text(
+                  //   "Powered by Revol Ventures",
+                  //   style: Theme.of(context).textTheme.headlineMedium,
+                  // ),
                 ],
               ),
             ),

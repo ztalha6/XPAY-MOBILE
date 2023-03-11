@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/PhoneNumberKit.swiftmodule/Project/arm64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		TZnZ2ZejOXGoYyjcMZ8a+vDQf9w=
+		oYiP6m52p9Y3bue/3qrL0/mpjfw=
 		</data>
 		<key>Modules/PhoneNumberKit.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<data>
-		/o02VFRGE10BJvdhQFzGJVa5Ruk=
+		/1Rbhz47LLy1iAfiV5RdtOL0PCM=
 		</data>
 		<key>Modules/PhoneNumberKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -85,22 +85,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			TZnZ2ZejOXGoYyjcMZ8a+vDQf9w=
+			oYiP6m52p9Y3bue/3qrL0/mpjfw=
 			</data>
 			<key>hash2</key>
 			<data>
-			pX/cj2kK2esZvNF7LzswN52P8NOy4sx2gWfwjMkeVXs=
+			yXD0OevPihfwmgQnYFwsoxwc45dL0xnPduS+wrDtNlc=
 			</data>
 		</dict>
 		<key>Modules/PhoneNumberKit.swiftmodule/Project/x86_64-apple-ios-simulator.swiftsourceinfo</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			/o02VFRGE10BJvdhQFzGJVa5Ruk=
+			/1Rbhz47LLy1iAfiV5RdtOL0PCM=
 			</data>
 			<key>hash2</key>
 			<data>
-			b4eAfSHeuTO1hYsO1ATYmmxCIh4fuanXLZMCpWXEMP8=
+			D5D5ZiCS/ZjqjyeH0oi+EBYfCKuvwcAQVOzNnPdSSCw=
 			</data>
 		</dict>
 		<key>Modules/PhoneNumberKit.swiftmodule/arm64-apple-ios-simulator.abi.json</key>

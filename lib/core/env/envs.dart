@@ -6,7 +6,7 @@ class Envs {
   static const Env LocalEnv = Env(
     'Local',
     EnvUsers.user2,
-    'http://192.168.1.105:4020/api/v1/',
+    'http://10.10.20.196:4020/api/v1/',
     prefillForms: true,
   );
   static const Env StagingEnv = Env(
@@ -33,7 +33,7 @@ class EnvUsers {
     '12345678',
   );
   static const EnvUser user2 = EnvUser(
-    'waqar4@yopmail.com',
+    'serveeasy@yopmail.com',
     'Demo@123',
   );
   /* You can create new users as many as you want like above. */

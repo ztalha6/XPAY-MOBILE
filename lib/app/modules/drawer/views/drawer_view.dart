@@ -170,7 +170,7 @@ class DrawerView extends GetView<DrawerViewController> {
                     bottom: 0.h,
                     child: const Padding(
                       padding: EdgeInsets.only(left: 16.0, bottom: 26),
-                      child: Text("Powered by Searve Easy"),
+                      child: Text("Powered by Vitality"),
                     ),
                   )
                 ],
